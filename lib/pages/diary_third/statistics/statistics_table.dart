@@ -22,7 +22,7 @@ class StatisticsTable extends GetView<DiaryTransLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.pjqaslo.value)),
+              url: WebUri.uri(Uri.parse(controller.djucqwb.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

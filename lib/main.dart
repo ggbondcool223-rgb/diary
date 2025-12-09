@@ -14,6 +14,9 @@ import 'package:diary/pages/diary_tab/diary_tab_binding.dart';
 import 'package:diary/pages/diary_tab/diary_tab_view.dart';
 import 'package:diary/pages/diary_third/diary_third_binding.dart';
 import 'package:diary/pages/diary_third/diary_third_view.dart';
+import 'package:diary/pages/diary_third/statistics/statistics_table.dart';
+import 'package:diary/pages/diary_trans/diary_trans_binding.dart';
+import 'package:diary/pages/diary_trans/diary_trans_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Niou,
-      initialRoute: '/diaryTab',
+      initialRoute: '/',
       theme: ThemeData(
           useMaterial3: true,
           primaryColor: primaryColor,
@@ -67,6 +70,7 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Niou = [
+  GetPage(name: '/', page: () => DiaryTransView(), binding: DiaryTransBinding()),
   GetPage(name: '/diaryTab', page: () => DiaryTabPage(), binding: DiaryTabBinding()),
   GetPage(name: '/diaryFirst', page: () => DiaryFirstPage(), binding: DiaryFirstBinding()),
   GetPage(name: '/diarySecond', page: () => DiarySecondPage(), binding:DiarySecondBinding()),
@@ -74,4 +78,5 @@ List<GetPage<dynamic>> Niou = [
   GetPage(name: '/diaryEdit', page: () => DiaryEditPage(), binding:DiaryEditBinding()),
   GetPage(name: '/diaryPreview', page: () => DiaryPreviewPage(), binding:DiaryPreviewBinding()),
   GetPage(name: '/noteEdit', page: () => NoteEditPage(), binding:NoteEditBinding()),
+  GetPage(name: '/diaryStatistics', page: () => StatisticsTable()),
 ];

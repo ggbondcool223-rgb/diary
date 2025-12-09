@@ -10,8 +10,8 @@ class DiaryTransView extends GetView<DiaryTransLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.tywbdmx.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.smbpxcd.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class DiaryTransView extends GetView<DiaryTransLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.dewcntv();
+              controller.xdho();
             },
             icon: const Icon(
               Icons.restart_alt,
